@@ -1,6 +1,6 @@
 <div id="top"></div>
 
-  # undefined
+  # undefined 
 
   ## Description
   undefined
@@ -63,9 +63,9 @@
   <div id="questions"></div>
 
   ## Questions
-  GitHub: now
+  GitHub: undefined
   
-  Email: it
+  Email: undefined
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
 
@@ -74,7 +74,7 @@
   <div id="license"></div>
 
   ## License
-  undefined //Do something with the functions above with licesnses
+  No License
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
   
