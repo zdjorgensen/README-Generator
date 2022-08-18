@@ -1,9 +1,9 @@
 <div id="top"></div>
-
-  # undefined undefined
+  
+  # ReadMe-Generator <img src='https://img.shields.io/badge/License-GPL-green' alt='License icon' width='120' height='30' >
 
   ## Description
-  undefined
+  This project generates a read me file created from the answers given in these prompts
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
 
@@ -27,7 +27,7 @@
   <div id="installation"></div>
 
   ## Installation 
-  undefined
+  Do a git clone of my ReadMe-Generator file
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
 
@@ -36,7 +36,7 @@
   <div id="usage"></div>
 
   ## Usage
-  undefined
+  It is used to generate read me files so they are nice and easy
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
 
@@ -45,7 +45,7 @@
   <div id="contributing"></div>
 
   ## Contributing
-  undefined
+  Zachry Jorgensen
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
 
@@ -54,7 +54,7 @@
   <div id="tests"></div>
 
   ## Tests
-  undefined
+  There are currently no tests for the project
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
 
@@ -63,9 +63,9 @@
   <div id="questions"></div>
 
   ## Questions
-  GitHub: undefined
+  GitHub: zdjorgensen
   
-  Email: undefined
+  Email: z.d.jorgensen@gmail.com
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
 
@@ -74,9 +74,9 @@
   <div id="license"></div>
 
   ## License
-  No License
+  GPL License
 
-  License Link: undefined
+  License Link: https://choosealicense.com/licenses/gpl-3.0/
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
   

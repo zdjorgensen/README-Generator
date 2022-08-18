@@ -1,22 +1,21 @@
+let choice; //Tracks the license choice
+let link; //Used for license link
+let badge; //Used for license badge icon
+
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-let choice;
-let link;
-let badge;
-
 function renderLicenseBadge(choice) {
   if(choice == "undefined") {
     return "";
   }
-  // Testing
-  if(choice == '0'){
-    badge = "Cool Badge";
+  if(choice == '0'){ //BSD-3 Icon
+    badge = 'https://img.shields.io/badge/License-BSD--3-green'; 
     return badge;
-  }else if(choice == '1'){
-    badge = "Cooler Badge";
+  }else if(choice == '1'){ //MIT Icon
+    badge = 'https://img.shields.io/badge/License-MIT-green';
     return badge;
-  } else if(choice == '2'){
-    badge = "Coolerist Badge";
+  } else if(choice == '2'){ //GPL Icon
+    badge = 'https://img.shields.io/badge/License-GPL-green';
     return badge;
   }
 }
@@ -24,7 +23,6 @@ function renderLicenseBadge(choice) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(choice) {
-  console.log(choice, 'Actually here');
   if(choice == "undefined") {
     return "";
   }
@@ -64,9 +62,11 @@ function renderLicenseSection(data) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   renderLicenseSection(data);
+  renderLicenseBadge(choice);
+  renderLicenseLink(choice);
   return `<div id="top"></div>
-
-  # ${data.title} ${renderLicenseBadge(choice)}
+  
+  # ${data.title} <img src='${badge}' alt='License icon' width='120' height='30' >
 
   ## Description
   ${data.description}
@@ -79,7 +79,6 @@ function generateMarkdown(data) {
    <ul>
     <li> <a href="#installation"> [Installation]</a> </li>
     <li> <a href="#usage"> [Usage]</a> </li>
-    <li> <a href="#credits"> [Credits]</a> </li>
     <li> <a href="#contributing"> [Contributing]</a> </li>
     <li> <a href="#tests"> [Tests]</a> </li>
     <li> <a href="#questions"> [Questions]</a> </li>
@@ -142,7 +141,7 @@ function generateMarkdown(data) {
   ## License
   ${data.license}
 
-  License Link: ${renderLicenseLink(choice)}
+  License Link: ${link}
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
   `;
