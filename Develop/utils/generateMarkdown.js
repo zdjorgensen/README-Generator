@@ -1,47 +1,69 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 let choice;
+let link;
+let badge;
+
 function renderLicenseBadge(choice) {
-  let badge;
-  if(choice === '0'){
-    return 
+  if(choice == "undefined") {
+    return "";
   }
-  
+  // Testing
+  if(choice == '0'){
+    badge = "Cool Badge";
+    return badge;
+  }else if(choice == '1'){
+    badge = "Cooler Badge";
+    return badge;
+  } else if(choice == '2'){
+    badge = "Coolerist Badge";
+    return badge;
+  }
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(choice) {
-  
+  console.log(choice, 'Actually here');
+  if(choice == "undefined") {
+    return "";
+  }
+
+  if(choice == '0'){ //BSD-3 License link
+    link = 'https://choosealicense.com/licenses/bsd-3-clause/';
+    return link;
+  }else if(choice == '1'){ //MIT License link
+    link = "https://choosealicense.com/licenses/mit/";
+    return link;
+  } else if(choice == '2'){ //GPL License link
+    link = "https://choosealicense.com/licenses/gpl-3.0/";
+    return link;
+  }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license !== 'No License') {
-    if(license === 'BSD 3-clause') {
+// choice 0 = BSD, 1 = MIT, 2 = GPL
+function renderLicenseSection(data) {
+  let license = data.license;
+  if(license !== "No License") {
+    if(license == 'BSD 3-Clause License') {
       choice = '0';
-      renderLicenseBadge(choice);
-      renderLicenseLink(choice);
-      return license, choice;
-    } else if( license === 'MIT License') {
-      choice = '1';
-      renderLicenseBadge(choice);
-      renderLicenseLink(choice);
-      return license, choice;
-    } else {
-      choice = '2';
-      renderLicenseBadge(choice);
-      renderLicenseLink(choice);
-      return license, choice;
+      return choice;
+    } else if(license == 'MIT License') {
+        choice = '1';
+        return choice;
+    } else if(license == 'GPL License') {
+        choice = '2';
+        return choice;
     }
   }
   return license;
 }
-//create license.txt???
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  // renderLicenseSection(data.license);
+  renderLicenseSection(data);
   return `<div id="top"></div>
 
   # ${data.title} ${renderLicenseBadge(choice)}
@@ -118,11 +140,14 @@ function generateMarkdown(data) {
   <div id="license"></div>
 
   ## License
-  ${renderLicenseSection(data.license)}
+  ${data.license}
+
+  License Link: ${renderLicenseLink(choice)}
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
   `;
 
 }
+
 
 module.exports = generateMarkdown;

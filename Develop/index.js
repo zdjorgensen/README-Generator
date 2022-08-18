@@ -4,14 +4,10 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
-const questions = [];
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, `${data}`, (err) => {
         if (err) throw err;
-        console.log('worked');
      })
 }
 
@@ -62,7 +58,7 @@ function init() {
             type: 'checkbox',
             message: 'Choose a license for the project.',
             name: 'license',
-            choices: ['BSD 3-Clause License','MIT License', 'GNU License', 'No License'],
+            choices: ['BSD 3-Clause License','MIT License', 'GPL License', 'No License'],
            },
         ]).then(data => {
             writeToFile('test.md', generateMarkdown(data)); //Change test.md name
