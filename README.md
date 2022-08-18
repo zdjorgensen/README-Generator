@@ -4,13 +4,13 @@
 
   ## About the Project
   
-  <img src="develop/img/Readme-gen-screenshot.png">
+  <img src="Develop/img/Readme-gen-screenshot.png">
 
   For the 9th challenge `Professional README Generator`, I used the provided code and added to it to create a README file using `Javascript`, `JQUERY`, and `NodeJS`. It is created with a series of prompts in the console after running `node index.js`. The answers from the prompts are then put into the generateMarkdown file to create a README file.
 
   This can be used to simplify creating a README file and to make the process easier for the user because they do not have to create the file they only have to answer a few questions.
 
-  The hardest part of this challenge was getting the lisence's to work. It took me awhile to figure out how to track which lisence was choosen and use that choice to change the link and badge icon in the README file. For this challenge, I used google, and previous activities, and previous Zoom recordings to help figure out how to complete the challenge.
+  The hardest part of this challenge was getting the lisence's to work. It took me awhile to figure out how to track which lisence was choosen and use that choice to change the link and badge icon in the README file. For this challenge, I used google, and previous activities, and previous Zoom recordings to help figure out how to complete the challenge. For some reason the image on this README file some times works and other times does not load correctly.
 
   <p align="right">(<a href="#top">Back to Top</a>)</p>
 
